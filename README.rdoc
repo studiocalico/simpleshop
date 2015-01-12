@@ -1,5 +1,18 @@
-== Simple Shop
+= Simple Shop
 
 The Simple Shop is open for business! The shop doesn't really concern itself with looking pretty, or even having a user interface at all - it's all about the data model. The shop keeps track of Users, Products, and Orders, and has some simple service objects in <tt>app/actions</tt> for the order lifecycle.
 
-Orders start out with status <strong>cart</strong> before the user checks out. When the order is placed, the status is changed to <strong>active</strong> and various important money amounts are also set.
+== Promo Codes
+
+The Simple Shop has been cruising along fine so far, but now the Sales Department wants to start offering Promo Codes! These will be codes that they can give out in e.g. newsletters in order to boost sales. Here are their requirements (in descending priority):
+
+* Ability to be -X% of subtotal or -$Y (discount should NOT be applied to shipping)
+* Ability to limit the number of uses of a particular promo code
+* Any one user can only use a particular promo code once
+* Ability to limit discount to particular products
+* Ability to assign the code manually or allow the system to generate a human-readable, random code
+
+In addition to this, the Sales Department also wants to be able to get reports on the following data after running their sales:
+
+* How much total discount has a particular promo code created?
+* How much total discount has a particular user received from promo codes?
